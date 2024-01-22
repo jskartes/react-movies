@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { movies } from '../../data.js';
 import ActorListPage from '../ActorListPage/ActorListPage';
 import LoginPage from '../LoginPage/LoginPage';
 import MovieDetailPage from '../MovieDetailPage/MovieDetailPage';
@@ -20,9 +21,18 @@ const App = () => {
         <>
           <NavBar user={user} />
           <Routes>
-            <Route path='/' element={<MoviesListPage />} />
-            <Route path='/movies/:movieName' element={<MovieDetailPage />} />
-            <Route path='/actors' element={<ActorListPage />} />
+            <Route
+              path='/'
+              element={<MoviesListPage movies={movies} />}
+            />
+            <Route
+              path='/movies/:movieName'
+              element={<MovieDetailPage movies={movies} />}
+            />
+            <Route
+              path='/actors'
+              element={<ActorListPage />}
+            />
           </Routes>
         </> :
         <Routes>          
