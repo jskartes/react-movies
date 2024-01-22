@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  cursor: default;
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+.App {
+  background-color: #ccc;
+  color: #333;
+  font-family: sans-serif;
+  height: 100vh;
+}
