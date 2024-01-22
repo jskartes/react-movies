@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 
-const NavBar = ({ user }) => {
+const NavBar = ({ user, setUser }) => {
+  const handleLogout = () => setUser(null);
+
   return (
     <nav>
       <span>React Movies</span>
@@ -11,7 +13,7 @@ const NavBar = ({ user }) => {
       &nbsp; | &nbsp;
       <Link to='/actors'>Actors List</Link>
       &nbsp; | &nbsp;
-      <Link to='#'><strong>Logout</strong></Link>
+      <Link to='/' onClick={handleLogout}><strong>Logout</strong></Link>
     </nav>
   );
 }

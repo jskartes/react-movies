@@ -19,7 +19,7 @@ const App = () => {
       {
         user ?
         <>
-          <NavBar user={user} />
+          <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route
               path='/'
