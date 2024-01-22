@@ -31,7 +31,7 @@ const App = () => {
             />
             <Route
               path='/actors'
-              element={<ActorListPage />}
+              element={<ActorListPage movies={movies} />}
             />
           </Routes>
         </> :
